@@ -9,7 +9,7 @@ public class CollegeConfig {
 
     // Private constructor
     private CollegeConfig() {
-        collegeName = "ABC College";
+        collegeName = "PCPS College";
         systemVersion = "1.0";
     }
 

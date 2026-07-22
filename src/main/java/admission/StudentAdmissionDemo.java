@@ -3,7 +3,7 @@ package admission;
 import java.util.Scanner;
 
 import builder.good.Student;
-
+import proxy.good.*;
 public class StudentAdmissionDemo {
 
     public static void main(String[] args) {
@@ -85,6 +85,17 @@ public class StudentAdmissionDemo {
         StudentAdmissionService service = new StudentAdmissionService();
 
         service.admitStudent(student, notificationType);
+        System.out.println("\n===== View Student Marks =====");
+
+        StudentRecordService admin =
+                new StudentRecordProxy("ADMIN");
+
+        admin.viewMarks();
+
+        StudentRecordService student1 =
+                new StudentRecordProxy("STUDENT");
+
+        student1.viewMarks();
 
         sc.close();
     }
